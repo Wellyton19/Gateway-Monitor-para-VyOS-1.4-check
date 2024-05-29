@@ -4,7 +4,7 @@ Este projeto consiste em dois scripts Bash que trabalham em conjunto para monito
 check_link_10.sh
 Função:
 
-Verifica periodicamente se o script principal (link_10_com_whattapp.py) está em execução.
+Verifica periodicamente se o script principal (link_10.py) está em execução.
 Se o script principal não estiver em execução, ele o inicia em segundo plano.
 Garante que apenas uma instância do script principal esteja ativa, evitando conflitos.
 Remove o arquivo de bloqueio (/var/run/link_10.py.lock) se ele existir e o script principal não estiver em execução.
@@ -21,7 +21,7 @@ Bash
 */5 * * * * /bin/bash /home/vyos/check_link_10.sh >> /var/log/cron.log 2>&1
 Use o código com cuidado.
 content_copy
-link_10_com_whattapp.py
+link_10.py
 Função:
 
 Monitora a conectividade do gateway principal (gateway_10) da tabela de roteamento 10.
@@ -31,8 +31,8 @@ Envia notificações por WhatsApp informando sobre as mudanças de status do gat
 Mantém um registro detalhado das verificações e ações no arquivo de log /var/log/gateway_monitor.log.
 Como Usar:
 
-Salve o script como link_10_com_whattapp.py.
-Dê permissão de execução:. chmod +x link_10_com_whattapp.py
+Salve o script como link_10.py.
+Dê permissão de execução:. chmod +x link_10.py
 Personalize as variáveis no início do script:
 external_ips: Endereços IP externos para testar a conectividade com a internet.
 interface_10: Interface de rede utilizada.
