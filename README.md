@@ -18,9 +18,13 @@ Dê permissão de execução:. chmod +x check_link_10.sh
 Configure o cron para executar o script periodicamente (por exemplo, a cada 5 minutos):
 
 Bash
-*/5 * * * * /bin/bash /home/vyos/check_link_10.sh >> /var/log/cron.log 2>&1
-Use o código com cuidado.
-content_copy
+* * * * * /home/vyos/check_link_10.sh >> /home/vyos/check_link_10.log 2>&1
+
+
+
+
+
+
 link_10.py
 Função:
 
